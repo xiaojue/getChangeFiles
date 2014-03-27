@@ -33,10 +33,9 @@ gcf.prototype = {
 		base = JSON.parse(base);
 		hfs.walk(p,function(lists,a){
 			files = lists;
-			files.forEach(function(file){
-				var filepath = path.join(p,file);
+			files.forEach(function(filepath){
 				var md5str = getMd5(filepath);
-				if(base[filepath] && base[filepath] !== md5str) changedList.push(filepath);
+				if(!base[filepath] || (base[filepath] && base[filepath] !== md5str)) changedList.push(filepath);
 				base[filepath] = md5str;	
 			});
 			hfs.writeFileSync(self.database,JSON.stringify(base),'utf-8');
