@@ -1,3 +1,8 @@
+/**
+ * @author xiaojue
+ * @email designsor@gmail.com
+ * @fileoverview 获取路径下变化的文件列表
+ */
 var lithe = require('lithe');
 var fs = require('fs');
 var crypto = require('crypto');
@@ -43,10 +48,3 @@ gcf.prototype = {
 };
 
 module.exports = new gcf();
-/*
-var changed = module.exports.get('./',function(item){
-	if(item.match(/^node_modules|^\./)) return false;
-	return true;
-});
-console.log(changed);
-*/
