@@ -1,0 +1,24 @@
+{
+	"name": "gcf",
+	"version": "0.0.1",
+	"author": [{
+		"name": "xiaojue",
+		"email": "designsor@gmail.com",
+		"url": "http://www.tuer.me"
+	}],
+	"description": "get directory changed files",
+	"keywords": ["changed","getFile","watch","grunt"],
+	"main": "./index.js",
+    "dependencies" : {
+		"lithe":"*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xiaojue/getChangeFiles"
+	},
+	"engines": {
+		"node": "*"
+	},
+	"license": "MIT"
+}
+
